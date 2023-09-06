@@ -1,0 +1,89 @@
+{
+  "name": "medysync-user-portal",
+//  "homepage": "https://SeychellesBB.github.io/MediSync",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
+    "@react-oauth/google": "^0.11.1",
+    "@reduxjs/toolkit": "^1.9.3",
+    "@syncfusion/ej2-react-schedule": "^22.2.8",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "apexcharts": "^3.37.0",
+    "array-move": "^4.0.0",
+    "axios": "^0.26.0",
+    "axios-cancel": "^0.2.2",
+    "date-fns": "^2.29.3",
+    "formik": "^2.2.9",
+    "framer-motion": "^9.0.4",
+    "gapi-script": "^1.2.0",
+    "gh-pages": "^6.0.0",
+    "lodash": "^4.17.21",
+    "luxon": "^3.2.1",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-big-calendar": "^1.8.2",
+    "react-color": "^2.19.3",
+    "react-data-table-component": "^7.4.7",
+    "react-date-range": "^1.4.0",
+    "react-datetime-picker": "^5.5.1",
+    "react-detect-click-outside": "^1.1.7",
+    "react-dom": "^18.2.0",
+    "react-easy-crop": "^4.7.4",
+    "react-google-login": "^5.2.2",
+    "react-icons": "^4.7.1",
+    "react-image-crop": "^10.0.9",
+    "react-intl": "^5.24.6",
+    "react-multi-level-selector": "^1.0.1",
+    "react-notifications-component": "^3.1.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.0",
+    "react-select-plus-sort": "^1.0.1",
+    "react-simple-timefield": "^3.3.1",
+    "react-sortable-hoc": "^2.0.0",
+    "react-taggables-input": "^0.1.4",
+    "react-time-picker": "^6.5.0",
+    "react-tooltip": "^4.5.1",
+    "styled-components": "^5.3.9",
+    "swiper": "^9.1.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.0.0"
+  },
+  "scripts": {
+   // "predeploy": "npm run build",
+   // "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

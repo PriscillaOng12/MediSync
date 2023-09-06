@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* adding fonts below */
+@font-face {
+    font-family: "Poppins";
+    src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url(./assets/fonts/Poppins-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url(./assets/fonts/Poppins-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+    font-style: normal;
+  }
+/* adding fonts above */
+
+html, body, #root{
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p,span.div, label, svg{
+    @apply text-content/90
+}
+
+
+/* FORMS BELOW */
+/* inputs */
+.input-text{
+    @apply w-full text-sm outline-none transition-all origin-center focus:border-primary border-2 border-gray-300 py-2 px-4 rounded-md focus:outline-none
+}
+  
+.input-text-lg{
+    @apply font-semibold w-full text-base outline-none transition-all origin-center focus:border-primary border-2 border-gray-300 py-3 px-3 rounded-md focus:outline-none
+}
+  
+.input-text-sm{
+    @apply font-semibold w-full text-xs outline-none transition-all origin-center focus:border-primary border-[1px] border-gray-300 py-2 px-1 rounded-md focus:outline-none
+}
+  
+.input-text-active{
+    @apply border-green-500
+}
+.input-text-error{
+    @apply border-red-500
+}
+.input-text-error ~ label{
+    @apply text-red-500
+}
+/* inputs */
+button{
+    @apple focus:outline-none
+}
+.btn-shadow{
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.4);
+}
+  
+.btn{
+    @apply select-none transition-all font-medium tracking-widest hover:tracking-[4px] focus:outline-none rounded-md py-4 uppercase px-5 text-sm disabled:bg-gray-300 disabled:text-gray-100 disabled:cursor-no-drop disabled:shadow-none
+}
+.btn{
+    @apply disabled:shadow-none !important
+}
+.btn-small{
+    @apply rounded-lg py-2 px-4 font-bold focus:outline-none text-xs relative transition-all shadow-md hover:shadow-lg disabled:shadow-none disabled:bg-gray-200 disabled:cursor-no-drop text-center
+  }
+.btn-md{
+    @apply select-none transition-all font-medium tracking-widest hover:tracking-[4px] focus:outline-none rounded-md py-3 uppercase px-4 text-xs disabled:bg-gray-300 disabled:text-gray-100 disabled:cursor-no-drop disabled:shadow-none
+}
+
+.btn-primary{
+    @apply bg-primary text-white 
+    /* @apply hover:bg-secondary active:bg-white  active:border-primary active:text-primary bg-primary text-white disabled:bg-gray-300 disabled:text-gray-100 disabled:cursor-no-drop */
+}
+
+.btn-primary:hover{
+    box-shadow: 10px 10px 10px 0 rgba(243,244,246,0.2);
+}
+.btn-primary:focus{
+    box-shadow: 0 0 0 0 rgba(243,244,246,0.5);
+}
+
+.btn-danger{
+    @apply hover:bg-red-600  focus:text-white focus:bg-red-600/100 bg-red-600/90 text-white disabled:bg-gray-300 disabled:text-gray-100 disabled:cursor-no-drop
+}
+.btn-primary-outline{
+    @apply hover:bg-secondary/20 focus:bg-white border-[1px] border-primary focus:text-primary  text-primary disabled:bg-gray-300 disabled:text-gray-100 disabled:cursor-no-drop
+}
+/* FORMS ABOVE */
+
+
+.image-shadow{
+    box-shadow: 0 0 30px 0px rgba(102, 59, 140, 0.3);
+}
+.image-shadow-sm{
+    box-shadow: 0 5px 3px 0px rgba(102, 59, 140, 0.2);
+}
+
+.heading-lg{
+    @apply text-4xl font-bold mb-5
+}
+
+.content-normal{
+    @apply text-content/70
+}
+.filter-input {
+    @apply px-4 rounded-md border-2 border-gray-300 focus:border-primary h-[37px] w-full focus:outline-none text-[12px] resize-none
+}
+.filter-input:disabled,.input:disabled{
+    cursor: not-allowed 
+}
+
+
+/* TAGGABLE */
+.my-tags .tags-input {
+    @apply rounded-md border-[2px] rounded-md border-gray-300 text-base w-full focus:outline-none
+}
+
+.my-tags .tags-input:focus-within, .my-tags-active .tags-input{
+  @apply border-green-500
+}
+.my-tags-error .tags-input{
+  @apply border-red-500
+}
+
+.my-tags .tags-input input {
+    background: transparent;
+    border: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    margin-top: 1px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+.my-tags .tag {
+    @apply rounded-md py-1 px-2 bg-primary text-white border-none inline-flex items-center
+}
+
+.my-tags button.remove {
+    display: none;
+    margin-left: 3px;
+    padding: 0;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+.my-tags .tag:hover button.remove {
+  @apply block bg-transparent ml-2 
+}
+
+
+.my-tags button.remove:after {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "×";
+    width: 5px;
+    height: 5px;
+    color: #fff;
+    text-align: center;
+}
+/* TAGGABLE */
+
+
+.h-w-line{
+    @apply inline-block mb-4 font-bold relative after:content-[''] after:absolute after:bottom-0 after:rounded-full after:h-[3px] after:w-[60%] after:bg-primary after:left-0
+}
+.h-w-line-md{
+@apply inline-block text-xl mb-4 font-bold relative after:content-[''] after:absolute after:bottom-0 after:rounded-full after:h-[3px] after:w-[60%] after:bg-primary after:left-0
+}
+.h-w-line-sm{
+@apply inline-block text-lg mb-4 font-bold relative after:content-[''] after:absolute after:bottom-0 after:rounded-full after:h-[3px] after:w-[60%] after:bg-primary after:left-0
+}
+.h-w-line-xs{
+@apply inline-block text-sm mb-4 font-normal relative after:content-[''] after:absolute after:bottom-0 after:rounded-full after:h-[2px] after:w-[60%] after:bg-primary after:left-0
+}
+
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 8px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+.inputFocusAnimation {
+  background-image: linear-gradient(#20aee3, #20aee3), linear-gradient(#bfbfbf, #bfbfbf);
+  border: 0 none;
+  border-radius: 12;
+  box-shadow: none;
+  /* float: none; */
+  background-color: transparent;
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  transition: background 0s ease-out 0s;
+  color: #020202;
+  min-height: 45px;
+  /* display: initial; */
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  &:focus {
+      background-size: 100% 2px, 100% 1px;
+      outline: 0 none;
+      transition-duration: 0.3s;
+      color: #525252;
+    }
+}
+
+/* Adjust the width of the input field */
+.react-time-picker__inputGroup__input {
+  width: 150px; /* Customize the width as needed */
+}
+
+/* Style for the arrow icons */
+.react-time-picker__button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Style for the clock icon */
+.react-time-picker__clock {
+  fill: #333;
+}
+
+/* Style for the clear icon */
+.react-time-picker__clear-button {
+  color: red;
+  cursor: pointer;
+}
+
+/* Style for the AM/PM indicator */
+.react-time-picker__am-pm-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Container styling */
+
+
+.react-time-picker__inputGroup__input{
+  width: 45px !important;
+}
+input.react-time-picker__inputGroup__input.react-time-picker__inputGroup__hour {
+  width: 30px !important;
+}
+input.react-time-picker__inputGroup__input.react-time-picker__inputGroup__minute{
+  width: 33px !important;
+}
+
+span.react-time-picker__inputGroup__divider{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+button.react-time-picker__clear-button.react-time-picker__button {
+  display: none;
+}
+button.react-time-picker__clock-button.react-time-picker__button {
+  display: none;
+}
+
+
+.rbc-calendar { 
+  height: 1000px !important; 
+}
