@@ -68,6 +68,7 @@ Follow these steps to set up Medisync:
     ```
 
 2. **Backend Setup:**
+   Source code for MediSynce backend is in a separate repository: [MediSync Backend Source Code](https://github.com/SeychellesBB/MediSync-django-backend)
 
     - Create a virtual environment and activate it:
 
@@ -76,7 +77,7 @@ Follow these steps to set up Medisync:
         source venv/bin/activate  # On Windows, use venv\Scripts\activate
         ```
 
-    - Install Python dependencies:
+    - Install Python dependencies:   
 
         ```bash
         pip install -r requirements.txt
@@ -100,7 +101,7 @@ Follow these steps to set up Medisync:
         python manage.py runserver
         ```
 
-3. **Frontend Setup:**
+4. **Frontend Setup:**
 
     - Navigate to the `frontend` directory:
 
@@ -120,11 +121,11 @@ Follow these steps to set up Medisync:
         npm start
         ```
 
-4. **Google Calendar Integration:**
+5. **Google Calendar Integration:**
 
     - Follow the Google Calendar API documentation to obtain API credentials and configure them in the Django settings.
 
-5. **Accessing the Application:**
+6. **Accessing the Application:**
 
     - Open a web browser and visit `http://localhost:3000` to access the Medisync application.
 
