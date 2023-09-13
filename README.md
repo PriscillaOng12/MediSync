@@ -8,7 +8,7 @@ Medisync is a full-stack web application designed to help users manage their med
 2. [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-3. [Usage](#usage)
+3. [Visit MediSync Website](#visit-medisync-website)
 4. [Technologies Used](#technologies-used)
 5. [Contributing](#contributing)
 6. [License](#license)
@@ -54,7 +54,7 @@ Before running Medisync, ensure you have the following prerequisites:
 
 - Database: Choose a database system compatible with Django, such as PostgreSQL, MySQL, or SQLite.
 
-- Google Calendar API Credentials: To enable Google Calendar integration, you'll need to obtain API credentials from the Google Developer Console.
+- Google Calendar API Credentials: To enable Google Calendar integration, you'll need to obtain API credentials from the Google Developer Console. Instructions: [https://developers.google.com/identity/sign-in/web/server-side-flow](url)
 
 ### Installation
 
@@ -128,21 +128,18 @@ Follow these steps to set up Medisync:
 
     - Open a web browser and visit `http://localhost:3000` to access the Medisync application.
 
-## Usage
+## Visit MediSync Website
 
-- **User Registration:** Users can create accounts by providing their information.
 
-- **Medication Management:** Users can add, edit, and delete medication details. They can also mark doses as taken.
+MediSync is officially deployed on Netlify, visit us at [https://64f96929d31918358edfbd16--lambent-conkies-37745c.netlify.app/](url). 
+MediSync is still currently under Google OAuth API verification process and as we have yet to complete the verification, 
+MediSync has an OAuth user cap of 100 test users prior to verfication. 
+If you are interested to be added to the test users list to synchronize your Google Calendar with MediSync or login with your Google account, 
+please email me at priscilla.ong.chuhui@gmail.com
 
-- **Medication Reminders:** Automated reminders for medication doses are sent to users.
+However, in then meantime, all users can register for a MediSync account through the website's user registration page. 
+Google Calendar synchronization will not be allowed without being adding to the test user list.
 
-- **Symptom Tracking:** Users can report and track symptoms using the provided form.
-
-- **Google Calendar Integration:** Users can sync medication and symptom tracking events with their Google Calendar.
-
-- **Compliance Visualization:** Users can view charts that visualize their medication compliance.
-
-- **Medical ID:** Users can create a medical ID with essential information for emergencies.
 
 ## Technologies Used
 
@@ -155,7 +152,6 @@ Medisync is built using the following technologies:
 
 - **Frontend:**
     - React.js: A JavaScript library for building user interfaces.
-    - Material-UI: A popular React UI framework for designing modern web applications.
 
 - **External Services:**
     - Google Calendar API: Used for calendar integration.
