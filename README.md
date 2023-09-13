@@ -130,7 +130,6 @@ Follow these steps to set up Medisync:
 
 ## Visit MediSync Website
 
-
 MediSync is officially deployed on Netlify, visit us at [https://64f96929d31918358edfbd16--lambent-conkies-37745c.netlify.app/](url). 
 MediSync is still currently under Google OAuth API verification process and as we have yet to complete the verification, 
 MediSync has an OAuth user cap of 100 test users prior to verfication. 
