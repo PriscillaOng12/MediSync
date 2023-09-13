@@ -1,73 +1,177 @@
-# For development node version used:
-14.17.0
+# Medisync: Medication and Symptom Tracking Web Application
 
-# Getting Started with Create React App
+Medisync is a full-stack web application designed to help users manage their medications and track their symptoms effectively. This README provides an overview of the application, its features, and instructions for setup and usage.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+3. [Usage](#usage)
+4. [Technologies Used](#technologies-used)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+Medisync offers a range of features to help users manage their medications and track their symptoms efficiently:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Medication Management:**
+    - Users can input details about their medications, including name, dosage, frequency, and start/end dates.
+    - Medication photos can be uploaded for easy identification.
+    - Medication intake is tracked through checkboxes, with the ability to mark doses as taken.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Medication Reminders:**
+    - Users receive automated reminders for medication schedules.
+    - Reminders can be configured based on the frequency and dosage of medications.
 
-### `npm test`
+- **Symptom Tracking:**
+    - Users can report and track their symptoms.
+    - A user-friendly form allows users to input symptom details, such as name, severity, and description.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Calendar Integration:**
+    - Integration with Google Calendar allows users to manage appointments seamlessly.
+    - Users can schedule medication doses and symptom tracking events, and these events sync with their Google Calendar.
 
-### `npm run build`
+- **Compliance Visualization:**
+    - Users can visualize their medication compliance on a weekly and monthly basis.
+    - Charts and graphs provide insights into medication adherence.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Medical ID Creation:**
+    - Users have the option to create a medical ID with essential information.
+    - This feature is useful in emergencies for providing medical details to healthcare providers.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+Before running Medisync, ensure you have the following prerequisites:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Python: Medisync is built using Django, a Python web framework. You will need Python installed on your system.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js and npm: Medisync's frontend is developed using React.js. Node.js and npm are required for managing React dependencies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Database: Choose a database system compatible with Django, such as PostgreSQL, MySQL, or SQLite.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Google Calendar API Credentials: To enable Google Calendar integration, you'll need to obtain API credentials from the Google Developer Console.
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Follow these steps to set up Medisync:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the Repository:**
 
-### Code Splitting
+    ```bash
+    git clone https://github.com/your-username/medisync.git
+    cd medisync
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Backend Setup:**
 
-### Analyzing the Bundle Size
+    - Create a virtual environment and activate it:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        ```bash
+        python -m venv venv
+        source venv/bin/activate  # On Windows, use venv\Scripts\activate
+        ```
 
-### Making a Progressive Web App
+    - Install Python dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+        ```bash
+        pip install -r requirements.txt
+        ```
 
-### Advanced Configuration
+    - Migrate the database:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+        ```bash
+        python manage.py migrate
+        ```
 
-### Deployment
+    - Create a superuser account (an admin account) for managing the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+        ```bash
+        python manage.py createsuperuser
+        ```
 
-### `npm run build` fails to minify
+    - Start the Django development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        ```bash
+        python manage.py runserver
+        ```
+
+3. **Frontend Setup:**
+
+    - Navigate to the `frontend` directory:
+
+        ```bash
+        cd frontend
+        ```
+
+    - Install React dependencies:
+
+        ```bash
+        npm install
+        ```
+
+    - Start the React development server:
+
+        ```bash
+        npm start
+        ```
+
+4. **Google Calendar Integration:**
+
+    - Follow the Google Calendar API documentation to obtain API credentials and configure them in the Django settings.
+
+5. **Accessing the Application:**
+
+    - Open a web browser and visit `http://localhost:3000` to access the Medisync application.
+
+## Usage
+
+- **User Registration:** Users can create accounts by providing their information.
+
+- **Medication Management:** Users can add, edit, and delete medication details. They can also mark doses as taken.
+
+- **Medication Reminders:** Automated reminders for medication doses are sent to users.
+
+- **Symptom Tracking:** Users can report and track symptoms using the provided form.
+
+- **Google Calendar Integration:** Users can sync medication and symptom tracking events with their Google Calendar.
+
+- **Compliance Visualization:** Users can view charts that visualize their medication compliance.
+
+- **Medical ID:** Users can create a medical ID with essential information for emergencies.
+
+## Technologies Used
+
+Medisync is built using the following technologies:
+
+- **Backend:**
+    - Django: A Python web framework for building robust web applications.
+    - Django REST framework: An extension for building APIs using Django.
+    - PostgreSQL: A powerful, open-source relational database.
+
+- **Frontend:**
+    - React.js: A JavaScript library for building user interfaces.
+    - Material-UI: A popular React UI framework for designing modern web applications.
+
+- **External Services:**
+    - Google Calendar API: Used for calendar integration.
+
+## Contributing
+
+Contributions to Medisync are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Open a pull request to the `main` branch of the original repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Thank you for using Medisync! We hope it helps users manage their medications and symptoms effectively.
