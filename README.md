@@ -2,6 +2,21 @@
 
 Medisync is a full-stack web application designed to help users manage their medications and track their symptoms effectively. This README provides an overview of the application, its features, and instructions for setup and usage.
 
+<img width="1728" alt="Screenshot 2023-09-14 at 9 07 19 AM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/a6eef40a-64c2-4414-8af8-3fa4d4b9462c">
+
+<img width="1728" alt="Screenshot 2023-09-13 at 8 05 09 PM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/80c56501-bb07-43cf-a211-1967f8cd3f80">
+
+<img width="1728" alt="Screenshot 2023-09-14 at 8 52 28 AM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/3411bb07-7036-4e31-aec4-e97999145ed5">
+
+<img width="1728" alt="Screenshot 2023-09-14 at 8 52 46 AM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/3376aea6-364e-440f-b28a-d43ebba9e776">
+
+<img width="1725" alt="Screenshot 2023-09-13 at 7 59 30 PM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/58d89475-194e-4ae2-b569-07893a5c927a">
+
+<img width="1728" alt="Screenshot 2023-09-14 at 8 37 02 AM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/77bfa442-f316-4b45-95f0-71e7ea947577">
+
+<img width="1728" alt="Screenshot 2023-09-14 at 8 56 59 AM" src="https://github.com/SeychellesBB/MediSync-django-backend/assets/141508555/14a3ea8f-41e7-4e71-9595-4a272c487666">
+
+
 ## Table of Contents
 
 1. [Features](#features)
